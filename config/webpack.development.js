@@ -19,7 +19,7 @@ module.exports = {
   module: {
     rules: [{
       test: /\.jsx?$/,
-      exclude: [/node_modules/, /public/],
+      exclude: [/node_modules(?!\/webpack-dev-server)/, /public/],
       resolve: { extensions: ['.js', '.jsx'] },
       use: [{
         loader: 'babel-loader',
@@ -38,4 +38,13 @@ module.exports = {
       template: root('src/application/view/index.html'),
     }),
   ],
+  devServer: {
+    contentBase: root('src/application'),
+    clientLogLevel: 'info',
+    historyApiFallback: true,
+    hot: true,
+    compress: true,
+    host: '0.0.0.0',
+    port: 3000,
+  },
 };
