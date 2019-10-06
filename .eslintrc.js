@@ -18,6 +18,9 @@ module.exports = {
       experimentalObjectRestSpread: true
     }
   },
+  plugins: [
+    'react-hooks',
+  ],
   rules: {
     'arrow-parens': [
       'error',
@@ -38,5 +41,9 @@ module.exports = {
         ]
       }
     ],
+    'react/jsx-one-expression-per-line': 'off',
+    'react/no-array-index-key': 'off',
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn'
   }
 };
