@@ -9,6 +9,7 @@ const output = root('public');
 module.exports = {
   entry: {
     application: [
+      'react-hot-loader/patch',
       root('src/application/index.js'),
     ],
   },
@@ -28,6 +29,11 @@ module.exports = {
         },
       }],
     }],
+  },
+  resolve: {
+    alias: {
+      'react-dom': '@hot-loader/react-dom',
+    },
   },
   plugins: [
     new CleanWebpackPlugin({

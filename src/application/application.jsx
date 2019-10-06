@@ -1,3 +1,5 @@
+import { hot } from 'react-hot-loader/root';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -10,4 +12,4 @@ const render = Body => {
   );
 };
 
-render(Application);
+export default render(hot(Application));
