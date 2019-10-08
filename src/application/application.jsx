@@ -3,7 +3,7 @@ import { hot } from 'react-hot-loader/root';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const Application = () => <div>Hello World!</div>;
+import Sandbox from './sandbox';
 
 const render = Body => {
   ReactDOM.render(
@@ -12,4 +12,4 @@ const render = Body => {
   );
 };
 
-export default render(hot(Application));
+export default render(hot(Sandbox));
